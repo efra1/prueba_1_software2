@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 16:08:47 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Dexter I Next Level Admin template</title>
+		<meta name="description" content="Dexter is a responsive HTML5 admin template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jquery-wizard.js/css/wizard.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- jquery-steps css -->
+		<link rel="stylesheet" href="../../vendors/bower_components/jquery.steps/demo/css/jquery.steps.css">
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		
+		
+		
+		<!-- Data table CSS -->
+		<link href="../../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- bootstrap-touchspin CSS -->
+		<link href="../../vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<!--Preloader-->
+		<div class="preloader-it">
+			<div class="la-anim-1"></div>
+		</div>
+		<!--/Preloader-->
+		<div >
+		
+		
+			
+			
+			
+			<!-- Main Content -->
+		
+				<div class="container-fluid">
+					
+					
+					
+
+					
+					<!-- Row -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark" align="center">REGISTRO UNICO DE ESTUDIANTES</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="">
+									<div class="panel-body">
+										<form id="example-advanced-form" action="../matriculas/guardar_matricula" method="post" >
+											<h3><span class="number"><i class="icon-user-following txt-black"></i></span><span class="head-font capitalize-font">DATOS DE ESTUDIANTE</span></h3>
+										
+												<div class="row">
+														<div >
+										<h6 class="panel-title txt-dark" align="center">DATOS DEL ESTUDIANTE</h6>
+									</div>
+													<div class="col-sm-6">
+											
+													
+														<div >
+										<h6 class="panel-title txt-dark">NOMBRE Y APELLIDO</h6>
+									</div>
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="nombre"  placeholder="agregar nombre " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El nombre debe ser solo letras">
+																</div>
+																
+																
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ap"  placeholder="agregar apellido paterno " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El Apellido debe ser solo letras">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="am"  placeholder="agregar apellido materno " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}"  title="El nombre debe ser solo letras">
+																</div>
+															</div>
+															
+															
+															
+															
+														</div>
+														
+														
+														
+														
+														<div >
+										<h6 class="panel-title txt-dark">LUGAR DE NACIMIENTO</h6>
+									</div>
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="pais"  placeholder="AGREGAR PAIS " required="required">
+																</div>
+																
+																
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="dpto"  placeholder="AGREGAR DEPARTAMENTO" required="required">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="provincia"  placeholder="AGREGAR PROVINCIA "required="required">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="localidad"  placeholder="AGREGAR LOCALIDAD "required="required">
+																</div>
+															</div>
+															
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="celular"  placeholder="N° CELULAR / TELEFONO "pattern="[0-9]{7}" title="El CI debe ser un numeros de 7 digitos">
+																</div>
+															</div>
+															
+															
+														</div>
+														
+														
+														
+														
+														
+													</div>
+													
+													
+													
+													
+																<div >
+										<h6 class="panel-title txt-dark">CODIGO ESTUDIANTIL RUDE</h6>
+									</div>
+													<div class="col-sm-6">
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ruestu"  placeholder="agregar nombre " pattern="[0-9]{7}" title="El rude debe ser un numeros de 7 digitos">
+																</div>
+																
+																
+															</div>
+															
+															<div >
+										<h6 class="panel-title txt-dark">DOCUMENTO DE IDENTIFICACION</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	
+																	CI : <input type="radio"   name="tipo_doc" value="CI" checked="checked">
+																	
+																	 PASAPORTE :<input type="radio"   name="tipo_doc" value="PASAPORTE">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ci_alum"  placeholder="NUMERO DE DOCUMENTO " required="required">
+																</div>
+															</div>
+															
+										<div >
+										<h6 class="panel-title txt-dark">FECHA DE NACIMIENTO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																	<input type="date" class="form-control " name="fechanac" >
+																</div>
+															</div>
+															
+															
+															
+															<div >
+										<h6 class="panel-title txt-dark">SEXO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	
+																	MASCULINO : <input type="radio"   name="sexo"  value="MASCULINO" checked="checked">
+																	
+																	 FEMENINO :<input type="radio"   name="sexo" value="FEMENINO">
+																</div>
+															</div>
+															
+															
+															
+															<div >
+										<h6 class="panel-title txt-dark">CERTIFICADO NACIMIENTO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="oficialia"  placeholder="OFICIALIA N° " required="required">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="libro"  placeholder="LIBRO N° " required="required">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="partida"  placeholder="PARTIDA N° " required="required">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="folio"  placeholder="FOLIO N° " required="required">
+																	</div>
+															</div>
+															
+														</div>
+													</div>
+													
+													
+													
+													
+																
+												</div>
+											
+										 	
+											<h3><span class="number"><i class="icon-bag txt-black"></i></span><span class="head-font capitalize-font">DATOS DE INSCRIPCION</span></h3>
+										
+												<div class="row">
+												
+												
+														<div >
+										<h6 class="panel-title txt-dark">DATOS DE INSCRIPCION DE LA GESTION ACTUAL</h6>
+									</div>
+													<div class="col-sm-12">
+													
+													<div >
+										<h6 class="panel-title txt-dark">NIVEL Y AÑO ESCOLAR DEL ESTUDIANTE</h6>
+									</div>
+														<div class="form-wrap">
+															
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-md-6 col-xs-12">
+																		
+																	<label class="control-label mb-10" >SELECCIONE CURSO</label>
+																	<select  class="form-control " name="codcurso">
+																	#foreach($tr in $cursos)	
+																				<option value="$tr.codcurso">$tr.nombre</option>
+																			#end	
+																	
+																	
+																</select>	
+																</div>
+																
+																
+																<div class="col-md-6 col-xs-12">
+																		
+																	<label class="control-label mb-10" >SELECCIONE GESTION</label>
+																	<select  class="form-control " name="codgestion">
+																	#foreach($tr in $gestiones)	
+																				<option value="$tr.codgestion">$tr.gestion</option>
+																			#end	
+																	
+																	
+																</select>
+																
+																
+																	
+																</div>
+																
+																	
+																	
+																	<div class="col-md-6 col-xs-12">
+																		
+																		<div >
+										<h6 class="panel-title txt-dark">INSCRIPCION</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	
+																	INSCRITO NUEVO : <input type="radio"   name="inscripcion"  value="NUEVO" checked="checked">
+																	
+																	 INSCRITO REINCORPORADO :<input type="radio"   name="inscripcion" value="REINCORPORADO">
+																</div>
+															</div>
+																	</div>
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																</div>
+															</div>
+															
+																	<div >
+										<h6 class="panel-title txt-dark">UNIDAD EDUCATIVA DE PROCEDENCIA</h6>
+									</div>
+															
+															
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-md-6 col-xs-12">
+																		<label class="control-label mb-10" >CODIGO SIE DE LA U.E</label>
+																		<input id="firstName" type="text" name="excol" class="form-control " value="" />
+																	</div>
+																	<div class="span1"></div>
+																	<div class="col-md-6 col-xs-12">
+																		<label class="control-label mb-10" for="lastName">NOMBRE</label>
+																		<input id="lastName" type="text" name="nom_excol" class="form-control " value="" />
+																	</div>
+																	
+																	
+																	
+																</div>
+															</div>
+															
+															
+															<div >
+										<h6 class="panel-title txt-dark">DOCUMENTOS PRESENTADOS AL MOMENTO DE INSCRIBIRCE</h6>
+									</div>
+															
+															
+															<div class="form-group">
+																
+																
+																<div >
+																
+																<label for="checkbox_1">CERTIFICADO DE NACIMIENTO</label>
+																	<input id="checkbox_1" type="radio" value="CERTIFICADO DE NACIMIENTO" name="doc_insc" checked="checked">
+																	<br>
+																<label for="checkbox_2">LIBRETA ESCOLAR </label>	
+																	<input id="checkbox_2" type="radio" value="LIBRETA ESCOLAR"  name="doc_insc">
+																	
+																	
+																</div>
+																
+																
+															</div>
+															
+														</div>
+													</div>
+												</div>
+											
+										 
+											<h3><span class="number"><i class="icon-credit-card txt-black"></i></span><span class="head-font capitalize-font">DIRECION DEL ESTUDIANTE</span></h3>
+											
+												<!--CREDIT CART PAYMENT-->
+												<div class="row">
+													
+																	<div >
+										<h6 class="panel-title txt-dark">DIRECION ACTUAL DEL ESTUDIANTE</h6>
+									</div>
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">DEPARTAMENTO</label>
+															<input type="text" class="form-control " name="departamento" required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">PROVINCIA</label>
+															<input type="text" id="cardNo" class="form-control " name="provincia_2"required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cvv">SECCION</label>
+															<input type="text" id="cvv" class="form-control  " name="seccion" required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">CANTON</label>
+															<input type="text" id="cardNo"  class="form-control " name="canton"required="required"/>
+														</div>
+														
+														
+														
+													</div>
+													
+													
+													
+													
+													
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">LOCALIDAD</label>
+															<input type="text" id="cardNo"  class="form-control " name="localidad_2" required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">ZONA/VILLA</label>
+															<input type="text" id="cardNo"  class="form-control " name="zona" required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cvv">AVENIDA/CALLE</label>
+															<input type="text" id="cvv" class="form-control  "  name="avenida" required="required" />
+														</div>
+														<div class="form-group">
+														
+														
+														<div class="row">
+														<div class="col-sm-6">
+														
+															<label class="control-label mb-10" for="cardNo">N° VIVENDA</label>
+															<input type="text" id="cardNo"  class="form-control " name="numero" required="required" />
+														
+														</div>
+														
+														<div class="col-sm-6">
+														
+															<label class="control-label mb-10" for="cardNo">TELEFONO</label>
+															<input type="text" id="cardNo"  class="form-control " name="telefono" required="required" pattern="[0-9]{7}" title="El telefono debe ser un numeros de 7 digitos" />
+														
+														</div>
+														
+														</div>
+														
+														</div>
+														
+														
+														
+													</div>
+												</div>
+												<!--CREDIT CART PAYMENT END-->
+										
+											
+											
+											<h3><span class="number"><i class="icon-credit-card txt-black"></i></span><span class="head-font capitalize-font">DATROS DE PADRE O TUTOR</span></h3>
+												
+												<!--CREDIT CART PAYMENT-->
+												<div class="row">
+													
+																	
+													
+																			<div >
+										<h6 class="panel-title txt-dark">DATOS DEL PADRE / TUTOR </h6>
+									</div>
+													
+													<div class="col-sm-6">
+													
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">CI</label>
+															<input type="text" id="cardNo"  class="form-control " name="ci_apo" value="" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">NOMBRE </label>
+															<input type="text" id="cardNo"  class="form-control " name="nombre_apo" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El nombre debe ser solo letras"/>
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">APELLIDO PATERNO</label>
+															<input type="text" id="cardNo"  class="form-control " name="ap_apo" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El apellido debe ser solo letras"/>
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">APELLIDO MATERNO</label>
+															<input type="text" id="cardNo"  class="form-control " name="am_apo" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" title="El apellido debe ser solo letras"/>
+														</div>
+														
+														
+														
+														
+													</div>
+													
+													
+													<div class="col-sm-6">
+													<div class="form-group">
+															<label class="control-label mb-10" for="cvv">OCUPACION LABORAL</label>
+															<input type="text" id="cvv" class="form-control  "  name="ocupacion" value="" required="required"/>
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">MAYOR GRADO DE INST</label>
+															<input type="text" id="cardNo"  class="form-control " name="gradoins" value="" required="required" />
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">IDIOMA QUE HABLA FRECUENTEMENTE</label>
+															<input type="text" id="cardNo"  class="form-control " name="idioma" value=""  required="required"/>
+														</div>
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">TELEONO/CELULAR</label>
+															<input type="text" id="cardNo"  class="form-control " data-mask="9999-9999" name="telefono_apo" value="" required="required"/>
+														</div>
+														
+														<div class="form-group">
+															<label class="control-label mb-10" for="cardNo">PARENTESCO</label>
+															<input type="text" id="cardNo"  class="form-control " name="parentesco" value="" required="required"/>
+														</div>
+													
+													</div>
+												
+												</div>
+												<!--CREDIT CART PAYMENT END-->
+										
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+										 
+											<h3><span class="number"><i class="icon-basket-loaded txt-black"></i></span><span class="head-font capitalize-font">ASPECTOS SOCIALES</span></h3>
+										
+													
+													
+												<div class="row">
+													
+																	<div >
+										<h6 class="panel-title txt-dark">ASPECTOS SOCIALES</h6>
+									</div>
+								<div class="col-sm-3">
+								
+								
+								
+										<div class="form-group">
+										<h6 class="mt-30 mb-15">LENGUA MATERNA DEL ESTUDIANTE</h6>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="QUECHUA" id="pimary-color-red1">
+									<label for="pimary-color-red1"> QUECHUA</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="MOXEÑO" id="pimary-color-blue1">
+									<label for="pimary-color-blue1"> MOXEÑO</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="AYMARA" id="pimary-color-green1">
+									<label for="pimary-color-green1"> AYMARA </label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="CASTELANO" id="pimary-color-yellow1" checked="checked">
+									<label for="pimary-color-yellow1"> CASTELANO </label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="GUARANY" id="pimary-color-pink1">
+									<label for="pimary-color-pink1"> GUARANY</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="CHIQUITANO" id="pimary-color-orange1">
+									<label for="pimary-color-orange1"> CHIQUITANO</label>
+								</div>
+															
+								<div class="radio mb-5">
+									<input type="radio" name="lengua_materna" value="OTRO" id="pimary-color-orange132">
+									<label for="pimary-color-orange132"> OTRO</label>
+								</div>
+								</div>
+								
+								
+								
+								
+								
+								<div class="form-group">
+										<h6 class="mt-30 mb-15"> EL ESTUDIANTE TIENE ACCESO A :</h6>
+								<label class="control-label mb-10 text-left">(seleccione varios)</label>
+													<div class="checkbox">
+														<input id="checkbox1" type="checkbox" name="serv_basicos" value="AGUA POTABLE A DOMICILIO"  >
+														<label for="checkbox1">
+															AGUA POTABLE A DOMICILIO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox2" type="checkbox" checked="checked" name="serv_basicos" value="AGUA POTABLE PILETA PUBLICA">
+														<label for="checkbox2">
+															AGUA POTABLE PILETA PUBLICA
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox3" type="checkbox" name="serv_basicos" name="serv_basicos" value="AGUA VERTIENTE/RIO">
+														<label for="checkbox3">
+															AGUA VERTIENTE/RIO
+														</label>
+													</div>	
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox4" type="checkbox" name="serv_basicos" value="AGUA DE POZO">
+														<label for="checkbox4">
+															AGUA DE POZO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox5" type="checkbox" checked="checked" name="serv_basicos" value="ELECTRICIDAD PUBLICA">
+														<label for="checkbox5">
+															ELECTRICIDAD PUBLICA
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox7" type="checkbox" name="serv_basicos" value="PANEL SOLAR">
+														<label for="checkbox7">
+															PANEL SOLAR
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox8" type="checkbox" name="serv_basicos" value="GAS A DOMICILIO">
+														<label for="checkbox8">
+															GAS A DOMICILIO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox9" type="checkbox" checked="checked" name="serv_basicos" value="ALCANTARILLADO">
+														<label for="checkbox9">
+															ALCANTARILLADO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox10" type="checkbox" name="serv_basicos" value="POZO SEPTICO">
+														<label for="checkbox10">
+															POZO SEPTICO
+														</label>
+													</div>
+													
+
+										</div>
+														
+								</div>
+													
+								<div class="col-sm-3">
+										<div class="form-group">
+										<h6 class="mt-30 mb-15">QUE IDIOMA HABLA EL ESTUDIANTE</h6>
+								<label class="control-label mb-10 text-left">(seleccione varios)</label>
+													<div class="checkbox-primary">
+														<input id="checkbox221" type="checkbox" name="idiomas" value="CASTELLANO">
+														<label for="checkbox221">
+															CASTELLANO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox222" type="checkbox" checked="checked" name="idiomas" value="QUECHUA">
+														<label for="checkbox222">
+															QUECHUA
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox223" type="checkbox" name="idiomas" value="GUARANY">
+														<label for="checkbox223">
+															GUARANY
+														</label>
+													</div>	
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox224" type="checkbox" name="idiomas" value="AYMARA">
+														<label for="checkbox224">
+															AYMARA
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox225" type="checkbox" checked="checked" name="idiomas" value="INGLES">
+														<label for="checkbox225">
+															INGLES
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox226" type="checkbox" name="idiomas" value="MOXEÑO">
+														<label for="checkbox226">
+															MOXEÑO
+														</label>
+													</div>
+													
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox22623" type="checkbox" name="idiomas" value="OTRO">
+														<label for="checkbox22623">
+															OTRO
+														</label>
+													</div>
+													
+
+										</div>
+										
+										
+										
+										
+										<div class="form-group">
+										<h6 class="mt-30 mb-15">EL ESTUDIANTE TRABAJA? </h6>
+								<div class="radio mb-5">
+									<input type="radio" name="trabaja" value="NO TRABAJA"  id="pimary-color-red33" checked="checked">
+									<label for="pimary-color-red33"> NO TRABAJA</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="trabaja" value="OBRERO/EMPLEADO" id="pimary-color-blue33">
+									<label for="pimary-color-blue33"> OBRERO/EMPLEADO</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="trabaja" value="TRABAJO INDEPENDIENTE " id="pimary-color-green33" >
+									<label for="pimary-color-green33"> TRABAJO INDEPENDIENTE </label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="trabaja" value="TRABAJO DOMESTICO EN CASA" id="pimary-color-yellow33">
+									<label for="pimary-color-yellow33"> TRABAJO DOMESTICO EN CASA </label>
+								</div>
+								
+								
+								
+								<div class="radio mb-5">
+									<input type="radio" name="trabaja" value="OTRO" id="pimary-color-yellow334">
+									<label for="pimary-color-yellow334"> OTRO</label>
+								</div>
+								</div>
+										
+										
+										
+										
+										
+														
+								</div>					
+													
+								<div class="col-sm-3">
+										<div class="form-group">
+										<h6 class="mt-30 mb-15">EL ESTUDIANTE SE IDENTIFICA COMO </h6>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="QUECHUA" id="pimary-color-red55">
+									<label for="pimary-color-red55"> QUECHUA</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="MOXEÑO" id="pimary-color-blue55">
+									<label for="pimary-color-blue55"> MOXEÑO</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="AYMARA" id="pimary-color-green55">
+									<label for="pimary-color-green55"> AYMARA </label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="CASTELANO" id="pimary-color-yellow55" checked="checked">
+									<label for="pimary-color-yellow55"> CASTELANO </label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="GUARANY" id="pimary-color-pink55">
+									<label for="pimary-color-pink55"> GUARANY</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="CHIQUITANO" id="pimary-color-orange55">
+									<label for="pimary-color-orange55"> CHIQUITANO</label>
+								</div>
+								
+								
+								<div class="radio mb-5">
+									<input type="radio" name="etimologia" value="OTRO" id="pimary-color-orange554">
+									<label for="pimary-color-orange554"> OTRO</label>
+								</div>
+								
+								</div>
+								
+								
+								
+								
+								
+								<div class="form-group">
+										<h6 class="mt-30 mb-15"> EL ESTUDIANTE TIENE ACCESO A ;</h6>
+								<label class="control-label mb-10 text-left">(seleccione varios)</label>
+													<div class="checkbox">
+														<input id="checkbox17" type="checkbox" name="acceso_medios" value="RADIO">
+														<label for="checkbox17">
+															RADIO
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox27" type="checkbox" name="acceso_medios" value="TELEVISOR">
+														<label for="checkbox27">
+															TELEVISOR
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox37" type="checkbox" name="acceso_medios" value="TELEFONO">
+														<label for="checkbox37">
+															TELEFONO
+														</label>
+													</div>	
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox47" type="checkbox" name="acceso_medios" value="CELULAR">
+														<label for="checkbox47">
+															CELULAR
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox57" type="checkbox" checked="checked" name="acceso_medios" value="COMPUTADORA">
+														<label for="checkbox57">
+															COMPUTADORA
+														</label>
+													</div>
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox67" type="checkbox" name="acceso_medios" value="INTERNET">
+														<label for="checkbox67">
+															INTERNET
+														</label>
+													</div>
+													
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox674" type="checkbox" name="acceso_medios" value="OTRO">
+														<label for="checkbox674">
+															OTRO
+														</label>
+													</div>
+
+										</div>
+														
+								</div>
+									
+							<div class="col-sm-3">
+								<div class="form-group">
+										<h6 class="mt-30 mb-15">EL ESTUDIANTE SE  TIENE SEGURO DE SALUD? </h6>
+								<div class="radio mb-5">
+									<input type="radio" name="seguro" value="SI" checked="checked" id="pimary-color-red76">
+									<label for="pimary-color-red76"> SI</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="seguro" value="NO" id="pimary-color-blue76">
+									<label for="pimary-color-blue76"> NO</label>
+								</div>
+								
+								</div>
+								
+								<div class="form-group">
+								<h6 class="mt-30 mb-15">DONDE ACUDE EN CASO DE ENFERMEDAD ? </h6>
+								
+									<input type="text" name="lugar_seguro" >
+									
+								</div>
+								
+								<div class="form-group">
+								<h6 class="mt-30 mb-15">GRUPO SANGUINEO </h6>
+								
+									<input type="text" name="grupo_sang" >
+									
+								</div>
+								
+								<div class="form-group">
+								<h6 class="mt-30 mb-15">EL ESTUDIANTE PRESENTA ALGUNA DISCAPACIDAD? </h6>
+								
+									<input type="text" name="discapacidad" >
+									
+								</div>
+								
+								
+								
+								<div class="form-group">
+										<h6 class="mt-30 mb-15">SU DISCAPACIDAD ES ? </h6>
+								<div class="radio mb-5">
+									<input type="radio" name="tipo_discapacidad90" value="DE NACIMIENTO" id="E1">
+									<label for="E1"> DE NACIMIENTO</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="tipo_discapacidad90" value="ADQUIRIDA" id="E2">
+									<label for="E2"> ADQUIRIDA</label>
+								</div>
+								<div class="radio mb-5">
+									<input type="radio" name="tipo_discapacidad90" value="HEREDITARIA" id="E3">
+									<label for="E3"> HEREDITARIA</label>
+								</div>
+								
+								<div class="radio mb-5">
+									<input type="radio" name="tipo_discapacidad90" value="NINGUNA" id="E4">
+									<label for="E4"> NINGUNA</label>
+								</div>
+								
+								</div>
+														
+								</div>
+
+
+									
+													
+													
+												</div>	
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+											
+											
+											
+											<input type="submit"  value="enviar todo" class="form-control">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+				</div>
+				
+			
+				
+			
+			<!-- /Main Content -->
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>		
+		
+		<!-- Form Wizard JavaScript -->
+		<script src="../../vendors/bower_components/jquery.steps/build/jquery.steps.min.js"></script>
+		<script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+		
+		<!-- Form Wizard Data JavaScript -->
+		<script src="../../dist/js/form-wizard-data.js"></script>
+		
+		<!-- Data table JavaScript -->
+		<script src="../../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+		
+		<!-- Bootstrap Touchspin JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		<!-- Starrr JavaScript -->
+		<script src="../../dist/js/starrr.js"></script>
+		
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+			
+	</body>
+
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 16:08:48 GMT -->
+</html>

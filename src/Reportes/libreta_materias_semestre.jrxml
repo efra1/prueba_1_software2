@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_periodo23" pageWidth="38" pageHeight="752" columnWidth="38" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="816b6f90-db91-4ee2-b1e4-1e49cf2e4f2d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codcurso" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\tesis_yesi\\matrix-admin\\src\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select n.*,m.nombre AS NOM_MATERIA,p.nombre as nombre_periodo,concat(a.nombre,' ',a.ap,' ',a.am)as nombre_alum,cu.nombre  AS NOM_CURSO,cu.codcurso AS CURSO from notas n
+join clase c on c.codclase=n.codclase
+join materia m on m.codmateria=c.codmateria
+join alumno a on a.codalumno=n.codalumno
+join curso cu on cu.codcurso=c.codcurso
+join periodo p on p.codperiodo=n.codperiodo
+
+ WHERE n.codalumno=$P{codalumno} and n.codperiodo=$P{codperiodo} and cu.codcurso=$P{codcurso}]]>
+	</queryString>
+	<field name="codnota" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codperiodo" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Integer"/>
+	<field name="nom_materia" class="java.lang.String"/>
+	<field name="nombre_periodo" class="java.lang.String"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<field name="nom_curso" class="java.lang.String"/>
+	<field name="curso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="89" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="39" height="89" uuid="66476e44-a820-4bd2-81dd-1d40ed4250d2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" rotation="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_periodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="39" height="19" uuid="b5a22ac5-618b-4e33-948d-28cef2b88d90"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>UE PAMPA GALANA </title>
+		<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+		
+			
+				
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					
+					
+			
+				   	<!-- Row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">MODIFICAR USUARIO</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+								<form action="../usuarios/actualizar_usuario" method="post" class="form-horizontal" enctype="multipart/form-data">
+													
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-wrap">
+														<div class="form-body">
+															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>Modificar los datos personales del usuario</h6>
+															<hr class="light-grey-hr"/>
+															
+															
+														<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CI </label>
+																		<div class="col-md-9">
+																			<input type="text" name="ci" value="$us.ci" class="form-control" placeholder="ingrese nombre " readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Nombre</label>
+																		<div class="col-md-9">
+																			<input type="text" name="nombre" value="$us.nombre" class="form-control" placeholder="ingrese nombre"  placeholder="ingrese nombre " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El nombre debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>	
+															
+															
+															
+															
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">apellido paterno</label>
+																		<div class="col-md-9">
+																			<input type="text" name="ap" value="$us.ap" class="form-control" placeholder="apellido paterno"  placeholder="ingrese apellido paterno " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required="required" title="El ap paterno debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">apellido materno</label>
+																		<div class="col-md-9">
+																			<input type="text" name="am" value="$us.am"  class="form-control" placeholder="ingrese apellido materno"   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" " title="El apellido materno debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															<div class="row">
+																
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Email</label>
+																		<div class="col-md-9">
+																			<input type="text" name="email" value="$us.email" class="form-control" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  title="el campo debe tener extencion @gmail.com">
+																		</div>
+																	</div>
+																</div>
+																
+																
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Telefono</label>
+																		<div class="col-md-9">
+																			<input type="text" name="telefono" value="$us.telefono" class="form-control" placeholder="Telefono" pattern="[0-9]{8}" title="El Telefono debe ser numeros de 8 digitos"  required="required">
+																		</div>
+																	</div>
+																</div>
+																
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">fecha Nacimiento</label>
+																		<div class="col-md-9">
+																			<input type="date" name="fechanac" value="$us.fechanac" class="form-control" required="required">
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-6">
+																	<label class="control-label mb-10 text-left">Genero</label>
+																<div class="radio radio-info">
+																<input type="radio" name="sexo" id="radio1" value="m"  #if($us.sexo=='m')  checked #end>
+																<label for="radio1">
+																	Masculino
+																</label>
+																</div>
+																<div class="radio radio-info">
+																	<input type="radio" name="sexo" id="radio2" value="f"  #if($us.sexo=='f')checked #end>
+																	<label for="radio2">
+																		Femenino	
+																	</label>
+																</div>
+																			</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Estado Civil</label>
+																		<div class="col-md-9">
+																			<select class="form-control" name="ecivil" required="required">
+																				<option value="s" #if($us.ecivil=='s') selected="selected" #end>Soltero</option>
+																				<option value="c" #if($us.ecivil=='c')selected="selected" #end>Casado</option>
+																				<option value="d" #if($us.ecivil=='d')selected="selected" #end>Divorciado</option>
+																				<option value="v" #if($us.ecivil=='v')selected="selected" #end>Viudo</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															
+															
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="mt-40">
+																		<input type="file" name="file" class="dropify"  data-default-file="../../fotos/usuarios/$us.foto" />
+																	</div>	
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+																										</div>
+														<div class="form-actions mt-10">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<button type="submit" class="btn btn-success  mr-10">ACEPTAR</button>
+																			<button type="button" class="btn btn-default" onclick="location.href='../usuarios/gestion_usuarios'">CANCELAR</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6"> </div>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+		
+				
+				</div>
+				
+			
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+	</body>
+
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+</html>

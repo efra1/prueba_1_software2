@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Dexter I Fast build Admin dashboard for any platform</title>
+		<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+		
+			
+				
+
+				<div class="container-fluid">
+					
+					
+					
+			
+				   	<!-- Row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">LISTA DE CURSOS</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+										
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-wrap">
+														<div class="form-body">
+															
+															
+														<div class="row">
+																<div class="col-md-8">
+																
+																#foreach($pr in $cursos)
+																	<div class="form-group">
+																		
+														<div class="col-sm-4 col-xs-15 mt-18">
+														<button type="button" onclick="location.href='../notas/lista_alumnos_clase?codcurso=$pr.codcurso'" class="btn btn-success btn-block btn-rounded btn-outline  btn-success"> $pr.nombre</button>
+													</div>
+																		
+																		
+																	</div>
+																	#end
+																</div>
+															
+															</div>	
+															
+														
+															
+															
+													</div>
+								
+												
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+		
+				
+				</div>
+				
+			
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+	</body>
+
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+</html>

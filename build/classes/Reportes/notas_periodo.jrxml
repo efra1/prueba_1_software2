@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="notas_periodo" pageWidth="381" pageHeight="555" columnWidth="381" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c27ba828-31bd-417a-bf44-91b5ccb06dae">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codclase" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="total" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\tesis_yesi\\matrix-admin\\src\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select n.*,p.nombre as nomperiodo ,c.nombre as nomclase,concat(a.ap,' ',a.am,' ',a.nombre) as alumno from notas n
+
+
+join periodo p on p.codperiodo=n.codperiodo
+join clase c on c.codclase=n.codclase
+join alumno a on a.codalumno=n.codalumno
+
+WHERE n.codalumno=$P{codalumno} and n.codclase=$P{codclase} and n.codperiodo=$P{codperiodo}]]>
+	</queryString>
+	<field name="codnota" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codperiodo" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Integer"/>
+	<field name="nomperiodo" class="java.lang.String"/>
+	<field name="nomclase" class="java.lang.String"/>
+	<field name="alumno" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="60">
+			<textField>
+				<reportElement x="95" y="0" width="284" height="20" uuid="f9adb5e4-c561-4459-b013-0a91704768cb"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="20" width="284" height="20" uuid="154d5b0d-f785-4d77-8f52-826214b395dc"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomperiodo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="40" width="284" height="20" uuid="4fe730bc-ba69-47eb-b788-98b54b7ab239"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomclase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="95" height="20" uuid="16836d2e-be63-4e6d-928f-0dc86652670c"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="95" height="20" uuid="2fc21230-b9d1-46eb-bd19-76665ee4a14a"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEMESTRE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="95" height="20" uuid="78023d26-4951-44c1-8fc0-6ef79d297527"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIA :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="288">
+			<subreport>
+				<reportElement x="75" y="0" width="304" height="60" uuid="e416c22d-fc8b-4d82-96d2-966211527b6f"/>
+				<subreportParameter name="codnota">
+					<subreportParameterExpression><![CDATA[$F{codnota}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "detalle.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="0" y="0" width="75" height="288" uuid="4ced0fb7-efcf-4b0f-b6ca-52ae448f9389"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomperiodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22">
+			<staticText>
+				<reportElement x="75" y="0" width="204" height="20" uuid="b5d11c80-0c48-40a4-a718-f401a212003d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="0" width="100" height="20" uuid="302b1419-1b1d-471c-9076-8a25d8164298"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

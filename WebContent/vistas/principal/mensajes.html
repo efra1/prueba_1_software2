@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Evaluación</title>
+		 <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Remove Tap Highlight on Windows Phone IE -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+	<!-- Data table CSS -->
+	<link href="../../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+	
+	<!-- Custom CSS -->
+	<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS -->
+	<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+       
+		#if($url)
+		<meta http-equiv="refresh" content="2;URL=../$url">
+		#end
+	</head>
+	<body  bgcolor="white">
+	
+			<div class="container-fluid">
+			
+			
+		<br><br><br><br><br>
+	<!--Preloader--><center>
+	<div class="panel panel-default card-view" align="center">
+							<div class="panel-heading" align="center">
+								<div class="pull">
+								#if($msg)
+									<h2 class="panel-title txt-dark">$msg</h2>
+								
+								#else
+								<h2 class="panel-title txt-dark">$error</h2>
+								#end
+								
+								
+								
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="panel-wrapper collapse in" align="center">
+								<div class="panel-body pb-0">
+									<div class="row">
+										<div class="col-sm-12 mb-20 text-center">
+											<span id="pie_chart_1" class="easypiechart" data-percent="100">
+												
+												<span class="percent head-font">cargando</span>
+												
+											<canvas height="100" width="100"></canvas></span>
+										</div>
+										
+									</div>	
+								</div>
+							</div>
+	</div>
+		
+							</div>
+	</div>	
+		
+	 <!-- google web fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: [
+                    'Source+Code+Pro:400,700:latin',
+                    'Roboto:400,300,500,700,400italic:latin'
+                ]
+            }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- jQuery -->
+    <script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+	<!-- Data table JavaScript -->
+	<script src="../../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.flash.min.js"></script>
+	<script src="../../vendors/bower_components/jszip/dist/jszip.min.js"></script>
+	<script src="../../vendors/bower_components/pdfmake/build/pdfmake.min.js"></script>
+	<script src="../../vendors/bower_components/pdfmake/build/vfs_fonts.js"></script>
+	
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+	<script src="../../dist/js/export-table-data.js"></script>
+	
+	
+	
+  <!-- jQuery -->
+    <script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="../../vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	<script src="../../dist/js/easypiechart-data.js"></script>	
+	
+	
+	
+	<!-- Slimscroll JavaScript -->
+	<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+	<!-- Owl JavaScript -->
+	<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+	<!-- Switchery JavaScript -->
+	<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+	
+	<!-- Fancy Dropdown JS -->
+	<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+	
+	<!-- Init JavaScript -->
+	<script src="../../dist/js/init.js"></script>
+	
+	
+	
+	
+	
+
+    <script>
+        $(function() {
+            // enable hires images
+            altair_helpers.retina_images();
+            // fastClick (touch devices)
+            if(Modernizr.touch) {
+                FastClick.attach(document.body);
+            }
+        });
+        
+        
+        
+        
+    </script>	
+		
+		
+		
+		
+		
+	</body>
+</html>

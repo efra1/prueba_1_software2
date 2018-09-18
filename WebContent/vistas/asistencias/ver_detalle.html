@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from hencework.com/theme/dexter/fixed-width-light/export-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 20:59:07 GMT -->
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>REPORTE DE ASISTENCIA $alumno.nombre</title>
+	<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="hencework"/>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+	<!-- Data table CSS -->
+	<link href="../../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+	
+		<!-- Custom CSS -->
+	<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+		<div class="page-wrapper">
+			<div class="container-fluid">		
+				<!-- Title -->
+				<div class="row heading-bg">
+					<div class="col-lg-7 col-md-4 ">
+					  <h3 class="txt-dark">DETALLE DE ASISTENCIA</h3>
+					   <h5 class="txt-dark"> ALUMNO:$alumno.nombre $alumno.ap $alumno.am </h5>
+					 <h5 class="txt-dark">CLASE : $clase.nombre</h5>
+					 <h5 class="txt-dark">CURSO : $clase.curso.nombre</h5>
+					</div>
+					
+				</div>
+				<!-- /Title -->
+				
+				<!-- Row -->
+				<div class="row heading-bg">
+				<div class="col-lg-10 ">
+				<table class="table table-striped display product-overview" id="datable_1">
+											
+											
+													
+											
+												<thead>
+												
+												<tr> 
+										<th> FECHA</th>
+										<th> ASSITENCIA</th>
+
+										
+												
+												
+													
+											
+													
+												
+												</thead>
+												<tbody>
+												
+											#foreach($pr in $asistencias)
+											
+											<tr> 
+													<td> $pr.fecha</td>
+													<td> $pr.asistencia</td>
+													#end
+											</tr>												
+												</tbody>
+												
+										<tfoot>
+										<tr bgcolor="whrite"> 
+												<td>P=PRESENTES :$presentes</td>
+                            					<td>F=FALTAS:$faltas</td>
+                            					<td>R=RETRASOS:$restrasos</td>
+                            					<td>C=PERMISOS:$permisos</td>
+                            					
+                            					<td></td>
+                            					<td>TOTAL:$total</td>
+											</tr>
+											</tfoot>	
+												
+											</table>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+								
+									</div></div>
+										</div>
+  <!-- JavaScript -->
+	
+    <!-- jQuery -->
+    <script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+	<!-- Data table JavaScript -->
+	<script src="../../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.flash.min.js"></script>
+	<script src="../../vendors/bower_components/jszip/dist/jszip.min.js"></script>
+	<script src="../../vendors/bower_components/pdfmake/build/pdfmake.min.js"></script>
+	<script src="../../vendors/bower_components/pdfmake/build/vfs_fonts.js"></script>
+	
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="../../vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+	<script src="../../dist/js/export-table-data.js"></script>
+	
+	<!-- Slimscroll JavaScript -->
+	<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+	<!-- Owl JavaScript -->
+	<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+	<!-- Switchery JavaScript -->
+	<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+	
+	<!-- Fancy Dropdown JS -->
+	<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+	
+	<!-- Init JavaScript -->
+	<script src="../../dist/js/init.js"></script>
+	
+</body>
+
+
+</html>

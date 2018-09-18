@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Dexter I Fast build Admin dashboard for any platform</title>
+		<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+		
+			
+				
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					
+					
+			
+				   	<!-- Row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">DATOS DEL ESTUDIANTE</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+								<form action="../matriculas/actualizar_matricula" method="post" class="form-horizontal" enctype="multipart/form-data">
+													
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-wrap">
+														<div class="form-body">
+															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>DATOS DEL ALUMNO</h6>
+															<hr class="light-grey-hr"/>
+															
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="mt-40">
+																		<input type="file" name="file" class="dropify"  data-default-file="../../fotos/usuarios/$alumno.foto" readonly="readonly"/>
+																	</div>	
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+														<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CI </label>
+																		<div class="col-md-9">
+																			<input type="text" name="ci_alum" id="ci1" class="form-control" value="$alumno.ci_alum" readonly="readonly" required  pattern="[0-9]{7}" title="El CI debe ser un numeros de 7 digitos" onblur="validar_ci()">
+																			<input type="hidden" name="codmatricula"  value="$matricula.codmatricula" readonly="readonly" required  >
+																			<input type="hidden" name="codapoderado"  value="$apoderado.codapoderado" readonly="readonly" required  >
+																			<input type="hidden" name="codalumno"  value="$alumno.codalumno" readonly="readonly" required  >
+																			
+																		</div>
+																		<div id="lab_ci" >
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">RUE</label>
+																		<div class="col-md-9">
+																			<input type="text" name="ruestu" value="$alumno.ruestu" class="form-control" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>	
+															
+															
+															
+															
+															<div class="row">
+															<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">NOMBRE</label>
+																		<div class="col-md-9">
+																			<input type="text" name="nombre" class="form-control" value="$alumno.nombre" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">APELLIDO PATERNO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="ap" class="form-control" placeholder="apellido paterno" value="$alumno.ap" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">APELLIDO MATERNO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="am" class="form-control" placeholder="ingrese apellido paterno" value="$alumno.am" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															
+															
+																<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">GRUPO SANGUINEO</label>
+																		<div class="col-md-9">
+																			
+																			<select class="form-control" name="gruposanguineo" readonly="readonly">
+																				
+																			<option value="$alumno.gruposanguineo">$alumno.gruposanguineo</option>
+																			
+																			</select>
+																			
+																			
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">TELEFONO/CELULAR</label>
+																		<div class="col-md-9">
+																			<input type="text" name="celular" class="form-control" value="$alumno.celular" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">FECHA DE NACIMIENTO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="fechanac" class="form-control" readonly="readonly" value="$alumno.fechanac">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">GESTION</label>
+																		<div class="col-md-9">
+																		
+																			<input type="text" name="A_ingreso" class="form-control" required readonly="readonly">
+																		
+																		
+																		</div>
+																	</div>
+																</div>
+																
+																
+																
+																<!--/span-->
+															</div>
+															
+															
+															
+															<div class="row">
+															
+															
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">OBSERVACION</label>
+																		<div class="col-md-9">
+																			<input type="text" name="observacion" class="form-control" readonly="readonly">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CURSO</label>
+																		<div class="col-md-9">
+																			<select class="form-control" name="codcurso" >
+																				
+																			#foreach($tr in $cursos)	
+																				<option value="$tr.codcurso" #if($tr.codcurso==$matricula.codcurso) selected="selected" #end>$tr.nombre</option>
+																			#end	
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+															
+															
+													</div>
+													
+													
+													
+													
+													
+													<div class="form-body">
+															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>DATOS DEL APODERADO</h6>
+															<hr class="light-grey-hr"/>
+															
+															
+														<div class="row">
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CI </label>
+																		<div class="col-md-9">
+																			<input type="text" name="ci_apo1" class="form-control" value="$apoderado.ci_apo" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																
+																<!--/span-->
+															</div>	
+															
+															
+															
+															
+															<div class="row">
+															<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">NOMBRE</label>
+																		<div class="col-md-9">
+																			<input type="text" name="nombre1" class="form-control" value="$apoderado.nombre" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">APELLIDO PATERNO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="ap1" class="form-control" value="$apoderado.ap"  readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">APELLIDO MATERNO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="am1" class="form-control"  value="$apoderado.am" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															
+										<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">EMAIL </label>
+																		<div class="col-md-9">
+																			<input type="email" name="correo1" class="form-control" value="$apoderado.correo" readonly="readonly"> 
+																			
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">TELEFONO </label>
+																		<div class="col-md-9">
+																			<input type="text" name="telefono1" class="form-control" value="$apoderado.telefono" readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																
+																<!--/span-->
+															</div>
+									
+									
+									
+									
+									<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">GRADO INSTITUCIONAL </label>
+																		<div class="col-md-9">
+																			<select class="form-control" name="gradoins1" >
+																			<option value="$apoderado.gradoins" >$apoderado.gradoins</option>
+																		
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">PARENTESCO </label>
+																		<div class="col-md-9">
+																			
+																			<select class="form-control" name="parentesco1">
+																		
+																		<option value="$apoderado.parentesco">$apoderado.parentesco</option>
+																
+																			</select>
+																			
+																			
+																			
+																		</div>
+																	</div>
+																</div>
+																
+																<!--/span-->
+															</div>
+									<div class="row">
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">OCUPACION</label>
+																		<div class="col-md-9">
+																			<input type="text" name="ocupacion1" class="form-control" value="$apoderado.ocupacion"  readonly="readonly">
+																			
+																		</div>
+																	</div>
+																</div>
+																
+																
+																<!--/span-->
+															</div>
+									
+										</div>
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+														<div class="form-actions mt-10">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<button type="submit" class="btn btn-success  mr-10">ACEPTAR</button>
+																			<button type="button" class="btn btn-default" onclick="location.href='../matriculas/gestion_matriculas'">CANCELAR</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6"> </div>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+		
+				
+				</div>
+				
+			
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+	</body>
+
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+</html>
+<script type="text/javascript">
+	 
+
+	  
+		  		 
+		function validar_ci() {   	
+			
+		
+			var CI =$('#ci1').val();
+		  	
+	  		
+	  		$.ajax({
+				url:"prueba",
+				type:"post",
+				data:{
+					"ci":CI
+				},
+				success:function(RESULTADO){
+					
+					
+					if( RESULTADO == '300'){
+						$("#lab_ci").html(" <label>el ci ya existe</label>");
+						$("#ci1").val('');
+					}
+					else if(RESULTADO == '200'){
+						$("#lab_ci").html(" <label>el ci esta disponible</label>");
+					}
+					
+					
+					
+					
+					
+				},
+				error:function(xhr){
+					alert("Error: al procesar la peticion! recargue e intente de nuevo!","danger");
+				}
+			});
+	  		 
+	  
+	  }
+	 
+    
+    	 
+	
+		
+    </script>

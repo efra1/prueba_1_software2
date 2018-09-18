@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Dexter I Fast build Admin dashboard for any platform</title>
+		<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+		
+			
+				
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					
+					
+			
+				   	<!-- Row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">ADICIONAR PROFESOR</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+								<form action="../profesores/guardar_profesor" method="post" class="form-horizontal" enctype="multipart/form-data">
+													
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-wrap">
+														<div class="form-body">
+															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>Ingrese los datos personales del nuevo profesor</h6>
+															<hr class="light-grey-hr"/>
+															
+															
+														<div class="row">
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CI </label>
+																		<div class="col-md-9">
+																			<input type="text" name="ci" id="ci1" onblur="validar_ci()" class="form-control" placeholder="ingrese CI" required  pattern="[0-9]{7}" title="El CI debe ser un numeros de 7 digitos" >
+																		<div id="lab_ci"></div>		
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">RDA</label>
+																		<div class="col-md-9">
+																			<input type="text" name="rud" class="form-control" required  pattern="[0-9]{7}" title="El RUD debe ser un numeros de 7 digitos" placeholder="ingrese rud">
+																			
+																		</div>
+																	</div>
+																</div>
+																
+																
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">ESPECIALIDAD</label>
+																		<div class="col-md-9">
+																			<select class="form-control" name="codespecialidad" required="required">
+																				
+																			#foreach($tr in $especialiades)	
+																				<option value="$tr.codespecialidad">$tr.nombre</option>
+																			#end	
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																
+																
+																<!--/span-->
+															</div>	
+															
+															
+															
+															
+															<div class="row">
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">NOMBRE</label>
+																		<div class="col-md-9">
+																			<input type="text" name="nombre" class="form-control" placeholder="apellido nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required title="El nombre debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-4">
+																	<div class="form-group">
+																		<div class="col-md-9">
+																			<input type="text" name="ap" class="form-control" placeholder="ingrese apellido paterno"  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required title="El apellido paterno debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="form-group">
+																		
+																		<div class="col-md-9">
+																			<input type="text" name="am" class="form-control" placeholder="ingrese apellido materno" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}"  title="El apellido paterno debe ser solo letras">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															<div class="row">
+																
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">EMAIL</label>
+																		<div class="col-md-9">
+																			<input type="text" name="email" class="form-control" placeholder="Email" required="required">
+																		</div>
+																	</div>
+																</div>
+																
+																
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">TELEFONO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="telefono" class="form-control" placeholder="Telefono" required="required">
+																		</div>
+																	</div>
+																</div>
+																
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">FECHA DE NACIMIENTO</label>
+																		<div class="col-md-9">
+																			<input type="date" name="fechanac" class="form-control" required="required">
+																		</div>
+																	</div>
+																</div><div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">LUGAR DE NACIMIENTO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="lugar_nac" class="form-control" placeholder="ingreses lugar de nacimiento" required="required">
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+															
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">DIRECCION</label>
+																		<div class="col-md-9">
+																			<input type="text" name="direccion" class="form-control" required="required">
+																		</div>
+																	</div>
+																</div><div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">DISTRITO</label>
+																		<div class="col-md-9">
+																			<input type="text" name="distrito" class="form-control" placeholder="ingreses distrito" required="required">
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-6">
+																	<label class="control-label mb-10 text-left">GENERO</label>
+																<div class="radio radio-info">
+																<input type="radio" name="sexo" id="radio1" value="m" checked>
+																<label for="radio1">
+																	Masculino
+																</label>
+																</div>
+																<div class="radio radio-info">
+																	<input type="radio" name="sexo" id="radio2" value="f" >
+																	<label for="radio2">
+																		Femenino	
+																	</label>
+																</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">ESTADO CIVIL</label>
+																		<div class="col-md-9">
+																			<select class="form-control" name="ecivil">
+																				<option value="s">Soltero</option>
+																				<option value="c">Casado</option>
+																				<option value="d">Divorciado</option>
+																				<option value="v">Viudo</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															
+															
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="mt-40">
+																		<input type="file" name="file" class="dropify" title="SUBIR FOTO" />
+																	</div>	
+																</div>
+																<!--/span-->
+																
+																<!--/span-->
+															</div>
+															
+														</div>
+														
+														
+														
+														
+														
+														<div class="form-body">
+															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>Ingrese datos de ingreso</h6>
+															<hr class="light-grey-hr"/>
+															
+															
+														<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">LOGIN </label>
+																		<div class="col-md-9">
+																			<input type="text" name="login" class="form-control" placeholder="ingrese login " required="required">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">CLAVE</label>
+																		<div class="col-md-9">
+																			<input type="text" name="clave" class="form-control" placeholder="ingrese clave" required="required">
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>	
+															
+																<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Pregunta</label>
+																		<div class="col-md-9">
+																			<input type="text" name="preg" class="form-control" >
+															
+                
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label col-md-3">Respuesta</label>
+																		<div class="col-md-9">
+																			<input type="text" name="resp" class="form-control" >
+																			
+																		</div>
+																	</div>
+																</div>
+																<!--/span-->
+															</div>	
+															
+														</div>
+														
+														
+														
+														
+														<div class="form-actions mt-10">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<button type="submit" class="btn btn-success  mr-10">ACEPTAR</button>
+																			<button type="button" class="btn btn-default" onclick="location.href='../profesores/gestion_profesores'">CANCELAR</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6"> </div>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+		
+				
+				</div>
+				
+			
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+	</body>
+<script type="text/javascript">
+	 
+
+	  
+		  		 
+		function validar_ci() {   	
+			
+		
+		  		var CI =$('#ci1').val();
+		  	
+		  		
+		  		$.ajax({
+					url:"prueba2p",
+					type:"post",
+					data:{
+						"ci":CI
+					},
+					success:function(RESULTADO){
+						if( RESULTADO == '300'){
+							$("#lab_ci").html(" <label>el ci ya existe</label>");
+							$("#ci1").val('');
+						}
+						else if(RESULTADO == '200'){
+							$("#lab_ci").html(" <label>el ci esta disponible</label>");
+						}
+						
+					},
+					error:function(xhr){
+						alert("Error: al procesar la peticion! recargue e intente de nuevo!","danger");
+					}
+				});
+	  }
+	
+    </script>
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+</html>

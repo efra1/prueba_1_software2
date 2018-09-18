@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Dexter I Fast build Admin dashboard for any platform</title>
+	<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="hencework"/>
+		<!-- Custom CSS -->
+
+	
+		<style type="text/css">
+body table {
+	
+}
+
+</style>
+
+
+
+
+</style>
+		
+
+	<body>
+	
+			<div class="page-wrapper">
+				<div class="container-fluid">
+		<center>
+
+  
+  #set($cont = 0)
+				#foreach($pr in $notas)
+				#set($cont = $cont + 1)
+  
+    <h1 align="center" >$pr.periodo.nombre</h1>
+    <table width="361" height="100" border="0" class="table table-striped display product-overview" id="datable_1">
+		  <tr>
+		  #foreach($t in $pr.detalle)	
+		    <td width="209" height="202"> <h4 >$t.item</h4><input type="text" value="$t.nota" size="8" readonly="readonly">
+		      <table border="1">
+		  <tr>
+		  #foreach($y in $t.sub_detalle)	
+		    <td height="58"> <h6 style="color:orange;">$y.item</h6><input type="text" value="$y.nota" size="2" readonly="readonly">
+			</td>
+		    
+			#end
+		  </tr>
+		  
+		</table></td>
+		
+		#end
+		    
+		  </tr>
+</table>
+  <h2 align="center" >  promedio   $pr.nota</h2>
+    
+    
+    #end
+ 
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+			</div>
+		
+		
+		
+	</body>
+<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+
+		
+<script type="text/javascript">
+function calcular_promedio(){
+	
+	var item1 = $('#item1').val();	
+	var item2 = $('#item2').val();	
+	var item3 = $('#item3').val();
+	var item4 = $('#item4').val();
+	
+	var prom=parseInt(item1)+parseInt(item2)+parseInt(item3)+parseInt(item4);
+var div=parseInt(prom)/4;
+	$('#item5').val(Math.round(div*0.10));
+	
+	
+	calcular_promedio5();
+	
+}
+function calcular_promedio2(){	
+	var item6 = $('#item6').val();	
+	var item7 = $('#item7').val();	
+	var item8 = $('#item8').val();
+	var item9 = $('#item9').val();
+	
+	var prom2=parseInt(item6)+parseInt(item7)+parseInt(item8)+parseInt(item9);
+var div2=prom2/4;
+	$('#item10').val(Math.round(div2*0.35));
+	calcular_promedio5();
+}
+function calcular_promedio3(){
+	var item11 = $('#item11').val();	
+	var item12 = $('#item12').val();	
+	var item13 = $('#item13').val();
+	var item14 = $('#item14').val();
+	
+	var prom3=parseInt(item11)+parseInt(item12)+parseInt(item13)+parseInt(item14);
+var div3=prom3/4;
+	$('#item15').val(Math.round(div3*0.35));
+	calcular_promedio5();
+}
+function calcular_promedio4(){
+	var item16 = $('#item16').val();	
+	var item17 = $('#item17').val();	
+	var item18 = $('#item18').val();
+	var item19 = $('#item19').val();
+	
+	var prom4=parseInt(item16)+parseInt(item17)+parseInt(item18)+parseInt(item19);
+var div4=prom4/4;
+	$('#item20').val(Math.round(div4*0.10));
+	calcular_promedio5();
+}
+
+
+function calcular_promedio5(){
+	var itemX5 = $('#item5').val();	
+	var itemX10 = $('#item10').val();	
+	var itemX15 = $('#item15').val();
+	var itemX20 = $('#item20').val();
+	var itemX21 = $('#item21').val();
+	var itemX22 = $('#item22').val()
+	var promT=parseInt(itemX5)+parseInt(itemX10)+parseInt(itemX15)+parseInt(itemX20);
+	
+	var to=Math.round(itemX21)+Math.round(itemX22);
+	var total=promT+to;
+
+	$('#TOTAL').val(Math.round(total));
+	
+}
+</script>
+</html>

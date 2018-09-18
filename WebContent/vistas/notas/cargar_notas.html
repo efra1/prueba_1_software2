@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Dexter I Fast build Admin dashboard for any platform</title>
+	<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="hencework"/>
+	
+	<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+body table {
+	font-size: 10px;
+}
+
+</style>
+		
+
+	<body>
+		
+		
+	
+	<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+				
+				
+				
+				<h3> CLASE : $clase.nombre</h3><br><br>
+				<h5>CURSO :$curso.nombre</h5><br><br>
+				<h5>ALUMNO :$alumno.nombre $alumno.ap $alumno.am</h5><br><br>
+				
+				<center>
+	<form action="../notas/guardar_notas_alumno_clase" method="post" class="form-horizontal" enctype="multipart/form-data">
+									
+	<input type="hidden" name="codclase" value="$clase.codclase"> 								
+	<input type="hidden" name="codalumno" value="$alumno.codalumno"> 									
+	 											
+	
+	<label class="control-label ">PERIODO</label>
+																	
+	<select class="form-control" name="codperiodo" required="required" class="form-control">
+	#foreach($tr in $periodos)	
+	<option value="$tr.codperiodo">$tr.nombre</option>
+	#end	
+	</select>
+																		
+	
+	
+	
+		<table width="1379" height="198" >
+  <tr>
+    <td colspan="6" align="center">EVALUACION TOTAL</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center">EVALUACION MAESTRO</td>
+    <td width="145" align="center">EVALUACION ESTUDIANTE</td>
+    <td width="184">TOTAL</td>
+  </tr>
+  <tr>
+    <td width="233" height="123">
+    <table cellspacing="0" cellpadding="0" border="1">
+  <col width="88" span="3" />
+  <tr>
+    <td rowspan="4" width="88">SER (10)</td>
+    <td width="88"><select class="form-control" name="nombre_ser" class="form-control" >
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right" width="88"><input type="number" min="0" max="100" size="1" class="form-control" name="detalle_ser" value="0" id="item1"  onblur="calcular_promedio()" required="required"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_ser">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" size="2" value="0" name="detalle_ser" class="form-control" id="item2"  onblur="calcular_promedio()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_ser" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" size="2" class="form-control"  value="0" name="detalle_ser" id="item3" onblur="calcular_promedio()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_ser" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" size="2" value="0"  class="form-control"name="detalle_ser"  id="item4" onblur="calcular_promedio()"></td>
+  </tr>
+  <tr>
+    <td colspan="2">PROMEDIO</td>
+    <td align="right"><input type="text"  name="ser" id="item5" readonly class="form-control"></td>
+  </tr>
+</table>
+    
+    
+    </td>
+    <td width="245"><table cellspacing="0" cellpadding="0" border="1">
+  <col width="88" span="3" />
+  <tr>
+    <td rowspan="4" width="88">SABER (35)</td>
+    <td width="88"><select class="form-control" name="nombre_saber" >
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right" width="88">
+    <input type="number" min="0" max="100" class="form-control" size="2" name="detalle_saber" value="0" id="item6" onblur="calcular_promedio2()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_saber" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0"  size="2" max="100"  value="0" name="detalle_saber"  id="item7"  onblur="calcular_promedio2()" class="form-control"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_saber">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" size="2" max="100"  value="0" name="detalle_saber"  id="item8" onblur="calcular_promedio2()" class="form-control"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_saber" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" class="form-control" size="2" max="100"  value="0" name="detalle_saber"  id="item9" onblur="calcular_promedio2()"></td>
+  </tr>
+  <tr>
+    <td colspan="2">PROMEDIO</td>
+    <td align="right"><input type="text"  name="saber" id="item10" readonly class="form-control"></td>
+  </tr>
+</table></td>
+    <td width="267"><table cellspacing="0" cellpadding="0" border="1">
+  <col width="88" span="3" />
+  <tr>
+    <td rowspan="4" width="88">HASER(35)</td>
+    <td width="88"><select class="form-control" name="nombre_haser" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right" width="88"><input type="number" size="2" min="0" max="100" class="form-control" name="detalle_haser"  value="0" id="item11" onblur="calcular_promedio3()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_haser" class="form-control">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0"  size="2" max="100" class="form-control" value="0" name="detalle_haser"  id="item12"  onblur="calcular_promedio()3"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_haser">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" size="2" max="100" class="form-control" value="0" name="detalle_haser"  id="item13" onblur="calcular_promedio3()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control"name="nombre_haser">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" size="2" max="100" class="form-control"  value="0"  name="detalle_haser"  id="item14" onblur="calcular_promedio3()"></td>
+  </tr>
+  <tr>
+    <td colspan="2">PROMEDIO</td>
+    <td align="right"><input type="text" name="haser" id="item15" readonly class="form-control"></td>
+  </tr>
+</table></td>
+    <td width="279"><table cellspacing="0" cellpadding="0" border="1">
+  <col width="88" span="3" />
+  <tr>
+    <td rowspan="4" width="88">DECIDIR(10)</td>
+    <td width="88"><select class="form-control" name="nombre_decidir">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right" width="88"><input type="number" min="0" size="2" max="100" class="form-control" name="detalle_decidir"  value="0" id="item16" onblur="calcular_promedio4()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_decidir">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" size="2" value="0" class="form-control" name="detalle_decidir" id="item17"  onblur="calcular_promedio4()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_decidir">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" size="2" value="0" class="form-control" name="detalle_decidir" id="item18" onblur="calcular_promedio4()"></td>
+  </tr>
+  <tr>
+    <td><select class="form-control" name="nombre_decidir">
+																	
+	#foreach($tr in $items)	
+	<option value="$tr.nombre">$tr.nombre</option>
+	#end	
+	</select></td>
+    <td align="right"><input type="number" min="0" max="100" class="form-control" size="2" value="0" name="detalle_decidir"  id="item19" onblur="calcular_promedio4()"></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    
+    PROMEDIO
+    </td>
+    <td align="right"><input type="text" name="decidir" id="item20" readonly class="form-control"></td>
+  </tr>
+</table></td>
+    <td><table width="142" border="1">
+  <col width="88" span="3" />
+  <tr>
+    <td width="225" colspan="2">SER (5)</td>
+    <td >DECIDIR (5)</td>
+  </tr>
+  <tr>
+    <td height="27" colspan="2"><input class="form-control" type="number" min="0" max="5" id="item21"  name="ser_est" onblur="calcular_promedio5()" value="0" size="10"></td>
+    <td><input  name="decidir_est" class="form-control" type="number" min="0" max="5" size="2" id="item22" onblur="calcular_promedio5()" value="0" size="10"></td>
+  </tr>
+</table></td>
+    <td><input name="TOTAL" type="text"  id="TOTAL" value="0" size="10" readonly class="form-control" ></td>
+  </tr>
+</table>
+
+<input type="submit" value="GUARDAR"> 
+</form>
+	</center>
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+			</div>
+		
+	</body>
+<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+
+		
+<script type="text/javascript">
+function calcular_promedio(){
+	
+	var item1 = $('#item1').val();	
+	var item2 = $('#item2').val();	
+	var item3 = $('#item3').val();
+	var item4 = $('#item4').val();
+	
+	var prom=parseInt(item1)+parseInt(item2)+parseInt(item3)+parseInt(item4);
+var div=parseInt(prom)/4;
+	$('#item5').val(Math.round(div*0.10));
+	
+	
+	calcular_promedio5();
+	
+}
+function calcular_promedio2(){	
+	var item6 = $('#item6').val();	
+	var item7 = $('#item7').val();	
+	var item8 = $('#item8').val();
+	var item9 = $('#item9').val();
+	
+	var prom2=parseInt(item6)+parseInt(item7)+parseInt(item8)+parseInt(item9);
+var div2=prom2/4;
+	$('#item10').val(Math.round(div2*0.35));
+	calcular_promedio5();
+}
+function calcular_promedio3(){
+	var item11 = $('#item11').val();	
+	var item12 = $('#item12').val();	
+	var item13 = $('#item13').val();
+	var item14 = $('#item14').val();
+	
+	var prom3=parseInt(item11)+parseInt(item12)+parseInt(item13)+parseInt(item14);
+var div3=prom3/4;
+	$('#item15').val(Math.round(div3*0.35));
+	calcular_promedio5();
+}
+function calcular_promedio4(){
+	var item16 = $('#item16').val();	
+	var item17 = $('#item17').val();	
+	var item18 = $('#item18').val();
+	var item19 = $('#item19').val();
+	
+	var prom4=parseInt(item16)+parseInt(item17)+parseInt(item18)+parseInt(item19);
+var div4=prom4/4;
+	$('#item20').val(Math.round(div4*0.10));
+	calcular_promedio5();
+}
+
+
+function calcular_promedio5(){
+	var itemX5 = $('#item5').val();	
+	var itemX10 = $('#item10').val();	
+	var itemX15 = $('#item15').val();
+	var itemX20 = $('#item20').val();
+	var itemX21 = $('#item21').val();
+	var itemX22 = $('#item22').val()
+	var promT=parseInt(itemX5)+parseInt(itemX10)+parseInt(itemX15)+parseInt(itemX20);
+	
+	var to=Math.round(itemX21)+Math.round(itemX22);
+	var total=promT+to;
+
+	$('#TOTAL').val(Math.round(total));
+	
+}
+</script>
+</html>

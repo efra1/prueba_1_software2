@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Dexter I Fast build Admin dashboard for any platform</title>
+		<meta name="description" content="Dexter is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Dexter Admin, Dexteradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+		
+		<!-- vector map CSS -->
+		<link href="../../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Bootstrap Dropify CSS -->
+		<link href="../../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+		<!-- Custom CSS -->
+		<link href="../../dist/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+		
+			
+				
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					
+					
+			
+				   	<!-- Row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">VER ALUMNO</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+													
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-wrap">
+															<div class="row">
+														<div >
+										<h6 class="panel-title txt-dark" align="center">DATOS DEL ESTUDIANTE</h6>
+									</div>
+													<div class="col-sm-6">
+											
+													
+														<div >
+										<h6 class="panel-title txt-dark">NOMBRE Y APELLIDO</h6>
+									</div>
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="nombre" value="$alumno.nombre" placeholder="agregar nombre " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" readonly="readonly" title="El nombre debe ser solo letras">
+																<input type="hidden" name="codalumno" value="$alumno.codalumno">
+																
+																</div>
+																
+																
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ap"  value="$alumno.ap" placeholder="agregar apellido paterno " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" readonly="readonly" title="El Apellido debe ser solo letras">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="am" value="$alumno.am" placeholder="agregar apellido materno " pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}"  readonly="readonly"title="El nombre debe ser solo letras">
+																</div>
+															</div>
+															
+															
+															
+														</div>
+														
+														
+														
+														
+														<div >
+										<h6 class="panel-title txt-dark">LUGAR DE NACIMIENTO</h6>
+									</div>
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="pais" value="$alumno.pais" placeholder="AGREGAR PAIS " readonly="readonly">
+																</div>
+																
+																
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="dpto" value="$alumno.dpto" placeholder="AGREGAR DEPARTAMENTO" readonly="readonly">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="provincia" value="$alumno.provincia" placeholder="AGREGAR PROVINCIA "readonly="readonly">
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="localidad" value="$alumno.localidad" placeholder="AGREGAR LOCALIDAD "readonly="readonly">
+																</div>
+															</div>
+															
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="celular" value="$alumno.celular" placeholder="N CELULAR / TELEFONO "pattern="[0-9]{7}" title="El CI debe ser un numeros de 7 digitos" readonly="readonly">
+																</div>
+															</div>
+															
+															
+														</div>
+														
+														
+														
+														
+														
+													</div>
+													
+													
+													
+													
+																<div >
+										<h6 class="panel-title txt-dark">CODIGO ESTUDIANTIL RUDE</h6>
+									</div>
+													<div class="col-sm-6">
+														<div class="form-wrap">
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ruestu" value="$alumno.ruestu" placeholder="agregar nombre " pattern="[0-9]{7}" title="El rude debe ser un numeros de 7 digitos" readonly="readonly">
+																</div>
+																
+																
+															</div>
+															
+															<div >
+										<h6 class="panel-title txt-dark">DOCUMENTO DE IDENTIFICACION</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																
+																
+																<div class="radio mb-5">
+									<input input type="radio"   name="tipo_doc" value="CI" id="pim1" #if($alumno.tipo_doc=='CI')  checked #end readonly="readonly">
+									<label for="pim1"> CEDULA DE IDENTIDAD</label>
+								</div>
+														<div class="radio mb-5">
+									<input input type="radio"   name="tipo_doc" value="PASAPORTE" id="pim1" #if($alumno.tipo_doc=='PASAPORTE')  checked #end readonly="readonly">
+									<label for="pim1"> PASAPORTE</label>
+								</div>
+										
+															</div>
+															</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																	<input type="text" class="form-control "  name="ci_alum"  value="$alumno.ci_alum" placeholder="NUMERO DE DOCUMENTO " readonly="readonly">
+																</div>
+															</div>
+															
+										<div >
+										<h6 class="panel-title txt-dark">FECHA DE NACIMIENTO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																	<input type="date" class="form-control " name="fechanac"  value="$alumno.fechanac" readonly="readonly">
+																</div>
+															</div>
+															
+															
+															
+															<div >
+										<h6 class="panel-title txt-dark">SEXO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	
+																	MASCULINO : <input type="radio"   name="sexo"  value="MASCULINO" #if($alumno.sexo=='MASCULINO')  checked #end>
+																	
+																	 FEMENINO :<input type="radio"   name="sexo" value="FEMENINO" #if($alumno.sexo=='FEMENINO')  checked #end>
+																</div>
+															</div>
+															
+															
+															
+															<div >
+										<h6 class="panel-title txt-dark">CERTIFICADO NACIMIENTO</h6>
+									</div>
+															<div class="form-group">
+																<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="oficialia" value="$alumno.oficialia"  placeholder="OFICIALIA N° " readonly="readonly">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="libro" value="$alumno.libro" placeholder="LIBRO N° " readonly="readonly">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="partida" value="$alumno.partida" placeholder="PARTIDA N° " readonly="readonly">
+																	</div>
+																	<div class="input-group">
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																<input type="text" class="form-control "  name="folio"  value="$alumno.folio" placeholder="FOLIO N° " readonly="readonly">
+																	</div>
+															</div>
+															
+														</div>
+													</div>
+													
+													
+													
+													
+																
+												</div>
+													
+												
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+														<div class="form-actions mt-10">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<button type="button" class="btn btn-success  mr-10" onclick="print()">ACEPTAR</button>
+																			<button type="button" class="btn btn-default" onclick="location.href='../alumnos/gestion_alumnos'">CANCELAR</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6"> </div>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+					
+		
+				
+				</div>
+				
+			
+			</div>
+			<!-- /Main Content -->
+		
+		</div>
+		<!-- /#wrapper -->
+		
+		<!-- JavaScript -->
+		
+		<!-- jQuery -->
+		<script src="../../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+		
+		<!-- Bootstrap Daterangepicker JavaScript -->
+		<script src="../../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+		
+		<!-- Form Flie Upload Data JavaScript -->
+		<script src="../../dist/js/form-file-upload-data.js"></script>
+		<!-- Slimscroll JavaScript -->
+		<script src="../../dist/js/jquery.slimscroll.js"></script>
+	
+		<!-- Fancy Dropdown JS -->
+		<script src="../../dist/js/dropdown-bootstrap-extended.js"></script>
+		
+		<!-- Owl JavaScript -->
+		<script src="../../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+		<!-- Switchery JavaScript -->
+		<script src="../../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+		<!-- Init JavaScript -->
+		<script src="../../dist/js/init.js"></script>
+	</body>
+
+<!-- Mirrored from hencework.com/theme/dexter/full-width-light/form-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 19:44:57 GMT -->
+</html>
+<script type="text/javascript">
+	 
+
+	  
+		  		 
+		function validar_ci() {   	
+			
+		
+			var CI =$('#ci1').val();
+		  	
+	  		
+	  		$.ajax({
+				url:"prueba",
+				type:"post",
+				data:{
+					"ci":CI
+				},
+				success:function(RESULTADO){
+					
+					
+					if( RESULTADO == '300'){
+						$("#lab_ci").html(" <label>el ci ya existe</label>");
+						$("#ci1").val('');
+					}
+					else if(RESULTADO == '200'){
+						$("#lab_ci").html(" <label>el ci esta disponible</label>");
+					}
+					
+					
+					
+					
+					
+				},
+				error:function(xhr){
+					alert("Error: al procesar la peticion! recargue e intente de nuevo!","danger");
+				}
+			});
+	  		 
+	  
+	  }
+	 
+    
+    	 
+	
+		
+    </script>

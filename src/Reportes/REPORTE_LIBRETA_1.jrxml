@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORTE_LIBRETA_1" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e60cfd16-e5d1-4f0e-a021-e977f1e7508d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codcurso" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="t1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="t2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="t3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="texto_pie" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select libreta.*,c.nombre as nom_curso,concat(a.nombre,' ',a.ap,' ',a.am) as nombre_alum from libreta
+
+join curso c on c.codcurso=libreta.codcurso
+
+JOIN alumno a on a.codalumno=libreta.codalumno
+
+
+
+  WHERE libreta.codalumno=$P{codalumno} and libreta.codcurso=$P{codcurso}]]>
+	</queryString>
+	<field name="codlibreta" class="java.lang.String"/>
+	<field name="numero" class="java.lang.Integer"/>
+	<field name="gestion" class="java.lang.Integer"/>
+	<field name="estado" class="java.lang.Boolean"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codcurso" class="java.lang.String"/>
+	<field name="calificacion" class="java.lang.String"/>
+	<field name="nom_curso" class="java.lang.String"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="40" width="357" height="20" uuid="fd978f8a-fd73-486b-9ac9-1862c10aee12"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DISTRITO  : TARIJA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="61" width="357" height="20" uuid="19e587c9-1a39-4821-9b27-7c0a0c4582b4"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[UNIDAD EDUCATIVA: .E PAMPA GALANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="20" width="357" height="20" uuid="69477850-bc9b-4e8d-80ce-ff365fa9182f"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DEPENDENCIA : FISCAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="61" width="139" height="10" uuid="0f2f377a-e728-48b3-9620-d9b6aacad38f"/>
+				<textElement textAlignment="Center">
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Estado Plurinacional de Bolivia]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="506" y="0" width="67" height="20" uuid="956be1ac-0025-442f-a975-4ea9611da4a6"/>
+				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="49" y="10" width="80" height="50" uuid="5b4e02b3-087b-4cc7-99ec-221a12cb5a17"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Desktop\\escudo_bolivia.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="-81" width="357" height="20" uuid="79256f8e-0d30-48ad-89f5-74a0c465276d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ LIBRETA ESCOLAR ELECTRONICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="-11" width="139" height="10" uuid="37bd505f-32ee-43b6-b8b1-4e87e184e95b"/>
+				<textElement textAlignment="Center">
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Ministerio de Educasion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="324" y="0" width="54" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ca62bae2-aa54-4516-a41c-c98e8eb3839a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="39" width="266" height="20" uuid="da998fe3-e28b-4e16-9ebf-b2313dc1115c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EVALAUACION CUANTITATIVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="0" width="261" height="20" uuid="45b22087-ed85-4978-856e-e18d9afaea19"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_alum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="20" width="572" height="20" uuid="9992f595-a503-4233-8970-371c7cb30582"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EVALUACION SER , SABER ,HACER Y DECIDIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="39" width="306" height="20" uuid="30567391-1e27-4ae0-90d5-695ea14ee2bd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EVALUACION CUALITATIVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="0" width="195" height="20" uuid="786ee4c9-f720-47f2-8bb0-0ce8dd3d6f05"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_curso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="0" width="62" height="20" uuid="5cf1c5b3-257a-47ec-99bf-012f1b51d9f4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="128" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="0" width="200" height="100" uuid="bc53064f-7c59-4e32-941a-a200829303f4"/>
+				<subreportParameter name="codalumno">
+					<subreportParameterExpression><![CDATA[$P{codalumno}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codcurso">
+					<subreportParameterExpression><![CDATA[$P{codcurso}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<subreportParameter name="t1">
+					<subreportParameterExpression><![CDATA[$P{t1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="t2">
+					<subreportParameterExpression><![CDATA[$P{t2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="t3">
+					<subreportParameterExpression><![CDATA[$P{t3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="aprobo">
+					<subreportParameterExpression><![CDATA[$F{calificacion}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="texto_pie">
+					<subreportParameterExpression><![CDATA[$P{texto_pie}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["D:\\tesis_yesi\\matrix-admin\\src\\Reportes\\LIBRETA_PADRE.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

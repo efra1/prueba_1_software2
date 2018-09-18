@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boletin_notas" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76159e81-c9c7-44b4-a9d6-a6caf3ee5ec7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codcurso" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\tesis_yesi\\matrix-admin\\src\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select n.*,m.nombre AS NOM_MATERIA,p.nombre as nombre_periodo,concat(a.nombre,' ',a.ap,' ',a.am)as nombre_alum,cu.nombre  AS NOM_CURSO,cu.codcurso AS CURSO from notas n
+join clase c on c.codclase=n.codclase
+join materia m on m.codmateria=c.codmateria
+join alumno a on a.codalumno=n.codalumno
+join curso cu on cu.codcurso=c.codcurso
+join periodo p on p.codperiodo=n.codperiodo
+
+ WHERE n.codalumno=$P{codalumno} and n.codperiodo=$P{codperiodo} and cu.codcurso=$P{codcurso}]]>
+	</queryString>
+	<field name="codnota" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codperiodo" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Integer"/>
+	<field name="nom_materia" class="java.lang.String"/>
+	<field name="nombre_periodo" class="java.lang.String"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<field name="nom_curso" class="java.lang.String"/>
+	<field name="curso" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="203" y="14" width="168" height="20" uuid="74f1caab-3c40-421e-bc1e-f2ac38fadc6e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOLETIN DE NOTAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="203" height="20" uuid="8e070d84-a0d0-4b9f-b4dc-8252adbbb3a9"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[U.E PAMPA GALANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="203" height="20" uuid="f46ab87b-81c3-4da2-b9b7-074017b621b6"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DISTRITO 8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="203" height="20" uuid="d5eeba02-95a8-4fba-86e2-bf862bbeef35"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TARIJA - BOLIVIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="8" y="4" width="552" height="45" uuid="e192e856-e835-4d2e-8d59-feab1b7c3a2a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="7" width="54" height="20" uuid="af8bd4dd-592b-4a11-9d18-6979cad86cb5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="27" width="54" height="20" uuid="3f8f1422-c630-4bfb-a06d-9712e929ffbb"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CURSO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="76" y="27" width="209" height="20" uuid="40cb9c22-cfcc-4ee5-87a4-022043adf6da"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="7" width="209" height="20" uuid="9511ee89-bcde-488b-a9a6-28572023ca44"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_alum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<subreport>
+				<reportElement x="8" y="0" width="153" height="53" uuid="58625c4c-02f3-46b9-8012-b9d0da5a99c9"/>
+				<subreportParameter name="codalumno">
+					<subreportParameterExpression><![CDATA[$P{codalumno}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codperiodo">
+					<subreportParameterExpression><![CDATA[$P{codperiodo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codcurso">
+					<subreportParameterExpression><![CDATA[$P{codcurso}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reporte_periodo1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="188" y="0" width="134" height="53" uuid="2db743ee-dae0-4260-8e3a-a653beca07e1"/>
+				<subreportParameter name="codalumno">
+					<subreportParameterExpression><![CDATA[$P{codalumno}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codperiodo">
+					<subreportParameterExpression><![CDATA[$P{codperiodo2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codcurso">
+					<subreportParameterExpression><![CDATA[$P{codcurso}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reporte_periodo23.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="318" y="0" width="111" height="53" uuid="59a1698b-a4e9-47ef-98dc-a5a7a4b9dfd6"/>
+				<subreportParameter name="codalumno">
+					<subreportParameterExpression><![CDATA[$P{codalumno}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codperiodo">
+					<subreportParameterExpression><![CDATA[$P{codperiodo3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codcurso">
+					<subreportParameterExpression><![CDATA[$P{codcurso}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reporte_periodo23.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="3" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

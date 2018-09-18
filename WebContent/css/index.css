@@ -1,0 +1,65 @@
+@charset "iso-8859-1";
+body, #container, header, footer, table, p, input, img{
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-style: none;
+    text-align: center;
+}
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #494646;
+	margin-top:25px;
+	color: #ffffff;
+}
+#container {
+	background-color: #FFFFFF;
+	width: 900px; height: 600px;
+}
+
+header, footer {
+	width: 900px; height: 25px;
+	background-color: #047dab;
+}
+
+input {
+	width: 124px; height: 29px;
+	background-color:transparent;
+    border-radius: 10px;
+}
+
+#login, #pass{
+    background-color: white;
+}
+
+#fondoTab {
+	background-image:url(../img/main_box.png);
+	background-repeat:no-repeat;
+	height: 232px; width: 332px;
+	font-size: medium;
+    cellpadding: 0;
+    cellspacing: 0;
+}
+
+
+#aceptar {
+	width:119px;
+	height:35px;
+	background-image:url(../img/aceptar.png);
+	background-repeat:no-repeat;
+}
+
+#aceptar:hover {
+	background-image:url(../img/aceptar_hover.png);
+	background-repeat:no-repeat;
+}
+#dibujo{
+	width: 300px;
+	height:100px;
+}
+#titulo{
+	color:#000;
+	font-family:"Times New Roman", Times, serif;
+	text-decoration:underline;
+	font-weight:bolder
+}

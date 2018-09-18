@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_periodo1" pageWidth="288" pageHeight="752" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="80fc1daa-c940-407a-b65c-57ce11405592">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codperiodo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codcurso" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\tesis_yesi\\matrix-admin\\src\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select n.*,m.nombre AS NOM_MATERIA,p.nombre as nombre_periodo,concat(a.nombre,' ',a.ap,' ',a.am)as nombre_alum,cu.nombre  AS NOM_CURSO,cu.codcurso AS CURSO from notas n
+join clase c on c.codclase=n.codclase
+join materia m on m.codmateria=c.codmateria
+join alumno a on a.codalumno=n.codalumno
+join curso cu on cu.codcurso=c.codcurso
+join periodo p on p.codperiodo=n.codperiodo
+
+
+ WHERE n.codalumno=$P{codalumno} and n.codperiodo=$P{codperiodo} and cu.codcurso=$P{codcurso}]]>
+	</queryString>
+	<field name="codnota" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codperiodo" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Integer"/>
+	<field name="nom_materia" class="java.lang.String"/>
+	<field name="nombre_periodo" class="java.lang.String"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<field name="nom_curso" class="java.lang.String"/>
+	<field name="curso" class="java.lang.String"/>
+	<columnHeader>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="157" height="89" uuid="8991105e-6de7-461b-88d8-88f958f828a8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="20" width="104" height="69" uuid="717d9fe6-8038-443e-9bc4-31b32fa66096"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETALLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="158" y="0" width="130" height="20" uuid="828912fa-00df-4184-9b02-694535723161"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_periodo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="262" y="20" width="26" height="69" uuid="339e1aaa-cbd5-427a-a527-83c1a45e939f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" rotation="Left">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="157" height="61" uuid="94fe5266-d340-4553-ab7d-0f0ee23caacf"/>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nom_materia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="262" y="0" width="26" height="61" uuid="d5073da6-d26c-4172-bfd6-99494c307b76"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nota}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="157" y="0" width="105" height="61" uuid="de124428-1240-4839-bece-6aad8d424af6"/>
+				<subreportParameter name="codnota">
+					<subreportParameterExpression><![CDATA[$F{codnota}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "detalle_nuevo_rep.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

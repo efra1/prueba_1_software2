@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="profesor_clases" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f3f188b4-579d-4293-843a-6cf2505ea312">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codprofesor" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *,concat(f.nombre,' ',f.ap,' ',f.am)as nombre_alum ,cc.nombre as nombre_curso,h.* from clase
+join profesor c on c.codprofesor=clase.codprofesor
+join usuario f on f.ci=c.codusuario
+
+join curso cc on cc.codcurso=clase.codcurso
+
+
+JOIN horario h on h.codprofesor=c.codprofesor and h.codclase=clase.codclase
+WHERE clase.codprofesor=$P{codprofesor}]]>
+	</queryString>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codmateria" class="java.lang.String"/>
+	<field name="codprofesor" class="java.lang.String"/>
+	<field name="codcurso" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="codespecialidad" class="java.lang.String"/>
+	<field name="rud" class="java.lang.String"/>
+	<field name="codusuario" class="java.lang.String"/>
+	<field name="lugar_nac" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="distrito" class="java.lang.String"/>
+	<field name="ci" class="java.lang.String"/>
+	<field name="ap" class="java.lang.String"/>
+	<field name="am" class="java.lang.String"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="fechanac" class="java.sql.Date"/>
+	<field name="ecivil" class="java.lang.String"/>
+	<field name="foto" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="fotito" class="java.lang.Object"/>
+	<field name="codnivel" class="java.lang.String"/>
+	<field name="codparalelo" class="java.lang.String"/>
+	<field name="codturno" class="java.lang.String"/>
+	<field name="codgrado" class="java.lang.String"/>
+	<field name="codhorario" class="java.lang.String"/>
+	<field name="dia" class="java.lang.String"/>
+	<field name="hora_inicio" class="java.sql.Time"/>
+	<field name="hora_fin" class="java.sql.Time"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<field name="nombre_curso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="10" width="233" height="20" uuid="fa85ec92-3303-4dd5-9ddc-50ee58ad4fbf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CLASES POR PROFESOR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="116" y="8" width="240" height="20" uuid="be70f463-5da4-42c3-87b2-0cd7aee3f3f8"/>
+				<textFieldExpression><![CDATA[$F{nombre_alum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="8" width="71" height="20" uuid="3f25362f-b3b8-4416-b46a-ccf655b8c37f"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NOMBRE: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="28" width="71" height="20" uuid="8adcf0cc-6c42-4d7b-b22d-65cd6b29ed30"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CI:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="28" width="100" height="20" uuid="878735fc-3bab-474b-9aa3-c96223ae4adb"/>
+				<textFieldExpression><![CDATA[$F{ci}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="356" y="28" width="67" height="20" uuid="2f97303b-70bd-404a-9f6d-27fe23fa6b65"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO PROFESOR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="28" width="100" height="20" uuid="ff2cd427-8e2b-4831-8c51-de9c74357239"/>
+				<textFieldExpression><![CDATA[$F{codprofesor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="8" width="100" height="20" uuid="30edf730-ea4e-4421-92a4-ccd8c1ffdd6a"/>
+				<textFieldExpression><![CDATA[$F{rud}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="356" y="8" width="67" height="20" uuid="95e382e0-ad4d-4396-ac4f-6ca67e742a52"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUDE:]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="19" y="6" width="542" height="52" uuid="432b7c93-6611-4721-99de-bf82faabe143"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="100" height="20" uuid="8c7121f1-80d2-437d-98a5-d888b2398f2a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="24" width="100" height="20" uuid="a482b57b-f93a-4aa6-ad83-abd3e71b6653"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="24" width="100" height="20" uuid="047bf0d7-7cb4-45ce-92a7-3824c27bd7b3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="24" width="100" height="20" uuid="5272a7d3-dd60-40a9-95f3-120db4e11360"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="24" width="172" height="20" uuid="813a7700-76ab-45fc-a108-992a7313b6c2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORARIO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="100" height="20" uuid="3554c08f-722c-40d7-aeda-516ad99a772d"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{codclase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="1" width="100" height="20" uuid="db620bc2-263a-4a21-a9d9-04555933f244"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="1" width="100" height="20" uuid="a60a5a40-8604-4cba-b285-85e2d73b2157"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre_curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="1" width="100" height="20" uuid="fe560820-d365-4e91-97c8-5234187ad9b0"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm">
+				<reportElement x="400" y="1" width="72" height="20" uuid="53d8981b-7bc4-46c4-b180-fd9cb56ffea8"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{hora_inicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm">
+				<reportElement x="500" y="1" width="72" height="20" uuid="45c8a192-0f6f-4eff-af83-62b0fc844ce7"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{hora_fin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="1" width="28" height="20" uuid="0f7c12f0-c9e5-4cb5-b101-913fba8d5289"/>
+				<box>
+					<topPen lineWidth="0.75" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.75" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

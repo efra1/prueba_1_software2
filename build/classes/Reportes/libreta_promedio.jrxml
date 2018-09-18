@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="libreta_promedio" pageWidth="45" pageHeight="729" columnWidth="45" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="69dc71fe-f5ee-46b9-86f7-3429c198e8e8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="notas" uuid="5c0dfe75-5bfe-44e8-a3dc-327e3d24cd54">
+		<queryString language="SQL">
+			<![CDATA[select n.*,m.nombre AS NOM_MATERIA,p.nombre as nombre_periodo,concat(a.nombre,' ',a.ap,' ',a.am)as nombre_alum,cu.nombre  AS NOM_CURSO,cu.codcurso AS CURSO from notas n
+join clase c on c.codclase=n.codclase
+join materia m on m.codmateria=c.codmateria
+join alumno a on a.codalumno=n.codalumno
+join curso cu on cu.codcurso=c.codcurso
+join periodo p on p.codperiodo=n.codperiodo]]>
+		</queryString>
+		<field name="codalumno" class="java.lang.String"/>
+		<field name="nota" class="java.lang.Integer"/>
+		<field name="nombre_periodo" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="codalumno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codcurso" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select n.*,m.nombre AS NOM_MATERIA,p.nombre as nombre_periodo,concat(a.nombre,' ',a.ap,' ',a.am)as nombre_alum,cu.nombre  AS NOM_CURSO,cu.codcurso AS CURSO from notas n
+join clase c on c.codclase=n.codclase
+join materia m on m.codmateria=c.codmateria
+join alumno a on a.codalumno=n.codalumno
+join curso cu on cu.codcurso=c.codcurso
+join periodo p on p.codperiodo=n.codperiodo
+
+
+ WHERE n.codalumno=$P{codalumno} and cu.codcurso=$P{codcurso}]]>
+	</queryString>
+	<field name="codnota" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="estado" class="java.lang.Integer"/>
+	<field name="codclase" class="java.lang.String"/>
+	<field name="codalumno" class="java.lang.String"/>
+	<field name="codperiodo" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Integer"/>
+	<field name="nom_materia" class="java.lang.String"/>
+	<field name="nombre_periodo" class="java.lang.String"/>
+	<field name="nombre_alum" class="java.lang.String"/>
+	<field name="nom_curso" class="java.lang.String"/>
+	<field name="curso" class="java.lang.String"/>
+	<variable name="nota_1" class="java.lang.Integer" resetType="Column" calculation="Average">
+		<variableExpression><![CDATA[$F{nota}]]></variableExpression>
+	</variable>
+	<variable name="nota_2" class="java.lang.Integer" resetType="Column" calculation="Average">
+		<variableExpression><![CDATA[$F{nota}]]></variableExpression>
+	</variable>
+	<variable name="nota_3" class="java.lang.Integer" resetType="Column" calculation="Average">
+		<variableExpression><![CDATA[$F{nota}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="89">
+			<staticText>
+				<reportElement x="0" y="0" width="43" height="89" uuid="d320169d-0130-4baa-8006-391877b42709"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROMEDIO FINAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="43" height="19" uuid="9df6aa0d-59f5-478e-9146-fbfc62a164a2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{nota_3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>
